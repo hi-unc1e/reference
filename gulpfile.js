@@ -6,7 +6,7 @@ const terser = require('gulp-terser');
 
 // Compress js files
 gulp.task('js', function () {
-    return gulp.src(['./public/js/main.js'])
+    return gulp.src(['./public/js/main.js'], { allowEmpty: true })
         .pipe(terser({
             compress: true
         }))
